@@ -1,7 +1,6 @@
 function analyzeClick(){
-  var selected_color = document.getElementById("color")
-  var selected_place = document.getElementById("place")
-  var selected_course = document.getElementById("course")
-  var color = selected_color.options[selected_color.selectedIndex].value
-  alert(color);
+  var selected_color = document.querySelector('#color').selectedOptions[0].text //.textetElementById("color").selectedOptions[0].text
+  var selected_place = document.getElementById("place").selectedOptions[0].text
+  var selected_course = document.getElementById("course").selectedOptions[0].text
+  alert(selected_color.concat(',', selected_place, ',', selected_course);
 }
