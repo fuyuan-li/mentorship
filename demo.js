@@ -1,1 +1,3 @@
-
+function analyzeClick(){
+  alert('working');
+}
