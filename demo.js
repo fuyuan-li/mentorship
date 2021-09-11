@@ -14,12 +14,15 @@ function analyzeClick(){
     'music': [1,0,1],
     'lit': [0,1,2],
   }
+  var mentor_list = ['Dr. Physics', 'Mr.Banker', 'Ms.Violin']
   var selected_color = document.getElementById("color").selectedOptions[0].value; //querySelector('#color').selectedOptions[0].text
   var selected_place = document.getElementById("place").selectedOptions[0].value;
   var selected_course = document.getElementById("course").selectedOptions[0].value;
   yourscore = scores[selected_color].map((e,i)=>e+scores[selected_place][i])
   yourscore = yourscore.map((e,i)=>e+scores[selected_course][i])
-  msg = 'Your score is: '.concat(yourscore, '. We suggest ', 'this guy', ' for you!')
+  recom = yourscore.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
+  thisguy = mentor_list[recom]
+  msg = 'Your interest score is: ['.concat(yourscore, ']. We suggest ', 'this guy', ' for you!')
   alert(msg);
   
 }
