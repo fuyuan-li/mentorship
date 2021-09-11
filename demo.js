@@ -22,7 +22,7 @@ function analyzeClick(){
   yourscore = yourscore.map((e,i)=>e+scores[selected_course][i])
   recom = yourscore.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
   thisguy = mentor_list[recom]
-  msg = 'Your interest score is: ['.concat(yourscore, ']. We suggest ', 'this guy', ' for you!')
+  msg = 'Your interest score is: ['.concat(yourscore, ']. We suggest ', thisguy, ' for you!')
   alert(msg);
   
 }
