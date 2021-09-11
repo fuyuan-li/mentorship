@@ -19,6 +19,7 @@ function analyzeClick(){
   var selected_course = document.getElementById("course").selectedOptions[0].value;
   yourscore = scores[selected_color].map((e,i)=>e+scores[selected_place][i])
   yourscore = yourscore.map((e,i)=>e+scores[selected_course][i])
-  alert('We suggest ', 'xxx', yourscore, ' for you!');
+  msg = 'Your score is: '.concat(yourscore, '. We suggest ', 'this guy', ' for you!')
+  alert(msg);
   
 }
